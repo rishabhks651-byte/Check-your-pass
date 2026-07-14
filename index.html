@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check your pass</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#0f111a] flex items-center justify-center min-h-screen overflow-hidden font-sans text-white">
+
+    <canvas id="atmosCanvas" class="absolute inset-0 w-full h-full z-0 pointer-events-none"></canvas>
+
+    <main class="relative z-10 w-full max-w-md mx-4 p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-2xl shadow-2xl transition-all duration-500 hover:border-white/20">
+        
+        <header class="text-center mb-8">
+            <h1 class="text-2xl font-semibold tracking-tight text-white/90">Check your pass</h1>
+            <p class="text-sm text-white/40 mt-1">Immersive password security analysis</p>
+        </header>
+
+        <div class="relative mb-6">
+            <input 
+                type="password" 
+                id="passwordInput" 
+                placeholder="Enter your password..." 
+                class="w-full px-5 py-4 rounded-xl border border-white/10 bg-black/20 text-white placeholder-white/30 focus:outline-none focus:border-cyan-400/50 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300 tracking-wide text-lg"
+            >
+            <button id="toggleVisible" class="absolute right-4 top-1/2 -translate-y-1/2 text-white/40 hover:text-white/80 transition-colors">
+                👁️
+            </button>
+        </div>
+
+        <div class="space-y-6">
+            <div>
+                <div class="flex justify-between text-xs text-white/60 mb-2 px-1">
+                    <span>Security Level</span>
+                    <span id="strengthText" class="font-medium tracking-wide uppercase text-white/40">Empty</span>
+                </div>
+                <div class="h-1.5 w-full bg-white/5 rounded-full overflow-hidden p-[1px]">
+                    <div id="strengthBar" class="h-full w-0 rounded-full bg-white/20 transition-all duration-500 ease-out"></div>
+                </div>
+            </div>
+
+            <div id="feedbackBox" class="hidden rounded-xl bg-black/10 border border-white/5 p-4 text-sm text-white/70 space-y-2 transition-all duration-300">
+                <p id="crackTime" class="text-xs text-white/40"></p>
+                <p id="warning" class="text-amber-300/80 font-medium"></p>
+                <ul id="suggestions" class="list-disc list-inside space-y-1 text-white/60 text-xs"></ul>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
