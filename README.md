@@ -1,6 +1,6 @@
 # 🎛️ Check your pass
 
-An immersive, highly visual password vulnerability checker engineered with a high-fidelity design framework combining Windows 11's **Glassmorphism** depth layering and structural layouts influenced by **Dolby Atmos** visual engineering elements.
+An immersive, highly visual password vulnerability checker engineered with a high-fidelity design framework combining **Glassmorphism** depth layering and structural layouts influenced by **Dolby Atmos** visual engineering elements.
 
 ## ✨ Core Highlights
 * **Dynamic Physics Engine Simulation:** Background handles canvas audio-frequency simulations that change pace, hue, and wave rhythm depending on the complex strength metrics of the password input field.
